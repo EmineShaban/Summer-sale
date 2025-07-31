@@ -1,0 +1,259 @@
+/* body {
+    font-family: helen-regular;
+    color: var(--main-black);
+} */
+
+
+
+@font-face {
+    font-family: helen-light;
+    src: url(../fonts/Helen-Bg-Light.woff2);
+}
+
+@font-face {
+    font-family: helen-regular;
+    src: url(../fonts/Helen-Bg-Regular.woff2);
+}
+
+
+body {
+    /* font-family: "Roboto", sans-serif; */
+    color: var(--main-black);
+    font-family: helen-regular;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    margin-top: 0;
+}
+
+
+h1,
+h2 {
+    line-height: 1.3;
+    font-family: "Oswald", sans-serif;
+    /* font-family: "Gothic", sans-serif; */
+
+}
+
+p,
+li,
+a,
+span {
+    line-height: 1.3;
+}
+
+:root {
+    --main-black: #161616;
+    --main-yellow: #f3b800;
+    --light-yellow: #f8a900;
+    --main-grey: #ececec;
+    --main-red: #f3371a;
+    --main-orange: #f37c00;
+
+    --main-green: #2d6a3c;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+/*  */
+
+.hero {
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+
+
+}
+
+.logo {
+    width: 75px;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 34px;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.hero h2 {}
+
+
+/*  */
+.wow-badges {
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+.wow-badges img {
+    width: 60px;
+}
+
+
+
+
+
+
+/*  */
+
+.title {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    margin: 30px auto;
+}
+
+.title span {
+    display: block;
+}
+
+
+/*  */
+.swiper {
+    padding: 30px 0;
+}
+
+.offers {
+    background-color: #ff6000;
+    padding-bottom: 50px;
+
+}
+
+.offer-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.offer {
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    border: #ffcc00 1px solid;
+    box-shadow: 1px 1px 7px 1px #e9deb1d2;
+    min-height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer .discount {
+    background-color: #ff4e00;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50%;
+    padding: 15px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    transform: rotate(330deg);
+}
+
+.offer-div div {
+    margin-right: -20px;
+
+
+}
+
+.offer-div div p {
+    background-color: #ffcc00;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.offer-div div p:first-child {
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+
+
+
+.offer .thumb {
+    width: 100%;
+    margin: auto;
+    margin-top: -20px;
+}
+
+
+.swiper-wrapper .swiper-slide {
+    width: 70%;
+}
+
+.offer .name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+
+}
+
+.bundle-content {
+    color: #656565;
+    margin: 10px auto;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.offer a {
+    width: max-content;
+    background-color: #ff4e00;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    padding: 3px 30px;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    border-radius: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 500px) {}
