@@ -144,9 +144,62 @@ img {
 }
 
 .offers {
-    background-color: #ff6000;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
+    background: linear-gradient(180deg, rgba(255, 179, 0, 1) 20%, #ff4e00 100%);
 
+}
+
+.offers-div p {
+    text-align: center;
+    color: #ffffffe4;
+    font-size: 14px;
+    font-weight: 200;
+    width: 75%;
+    margin: auto;
+}
+
+ .title {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 15px;
+    text-shadow: #ff4e00 1px 0px 0px, #ff4e00 0.540302px 0.841471px 0px, #ff4e00 -0.416147px 0.909297px 0px, #ff4e00 -0.989992px 0.14112px 0px, #ff4e00 -0.653644px -0.756802px 0px, #ff4e00 0.283662px -0.958924px 0px, #ff4e00 0.96017px -0.279415px 0px;
+}
+
+ .title img {
+    width: 50px;
+    transform: rotate(15deg);
+
+}
+
+.offers-div h4 {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 30px;
+
+}
+
+.offers-div h4 b {
+    font-weight: 700;
+}
+
+.cutout-section {
+    position: relative;
+    height: 50px;
+}
+
+.cutout-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 20px solid white;
 }
 
 .offer-div {
@@ -171,7 +224,7 @@ img {
     justify-content: space-between;
 }
 
-.offer .discount {
+.discount {
     background-color: #ff4e00;
     border: 2px solid white;
     color: white;
@@ -188,7 +241,8 @@ img {
 
 }
 
-.offer-div div p {
+.offer-div div p,
+.free-delivery {
     background-color: #ffcc00;
     text-transform: uppercase;
     font-size: 12px;
@@ -197,9 +251,16 @@ img {
     text-align: left;
 }
 
-.offer-div div p:first-child {
+.offer-div div p:first-child,
+.free-plans {
     font-weight: 700;
     margin-bottom: 3px;
+    background-color: #ffcc00;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 3px 5px;
+    border-radius: 5px;
+
 }
 
 
@@ -216,19 +277,22 @@ img {
     width: 70%;
 }
 
-.offer .name {
+.name {
     text-align: center;
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
-
+    margin-bottom: 10px;
 }
 
 .bundle-content {
-    color: #656565;
+    color: #868686;
     margin: 10px auto;
     font-size: 12px;
     line-height: 1.2;
+    font-weight: 200;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .offer a {
@@ -243,11 +307,129 @@ img {
     color: white;
     font-weight: 700;
     border-radius: 30px;
+    font-family: "Roboto", sans-serif;
 
 }
 
 
+.orange-v-shape {
+    position: relative;
+    height: 50px;
+    background-color: #FF4E00;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    margin-top: -3px;
+    z-index: 3;
+}
 
+.blue-back {
+
+    background: linear-gradient(180deg, rgba(87, 200, 242, 1) 50%, #2b72c5 100%);
+    padding: 80px 20px 40px;
+    z-index: 2;
+    margin-top: -40px;
+
+
+}
+
+.bestsellers {
+    text-align: center;
+    position: relative;
+}
+
+.bestsellers-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    column-gap: 20px;
+    row-gap: 40px;
+    align-items: stretch;
+
+}
+
+
+.bestsellers-div .thumb {
+    width: 100%;
+    margin: auto;
+}
+
+.bestseller {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 7px 1px #f0edddd2;
+    border-radius: 25px;
+    position: relative;
+    height: auto;
+}
+
+.bestseller a {
+    width: max-content;
+    background-color: #ff4e00;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    padding: 3px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    border-radius: 30px;
+    font-family: "Roboto", sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+
+}
+
+.bestseller .discount {
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    font-size: 16px;
+
+}
+
+.bestseller .free-delivery,
+.bestseller .free-plans {
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.label {
+    color: white;
+    background-color: #00b9ff;
+    width: max-content;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 8px;
+    padding: 3px 7px;
+    border-radius: 20px;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.bestseller .name {
+    margin: 5px auto;
+    font-size: 14px;
+}
+
+.bestseller {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bestsellers .title span{
+    margin-left: 60px;
+}
+
+.bestsellers .title img{
+    width: 80px;
+}
 
 
 
