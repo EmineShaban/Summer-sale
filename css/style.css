@@ -67,7 +67,9 @@ img {
 }
 
 
-
+.on-desktop {
+    display: none;
+}
 
 /*  */
 
@@ -102,10 +104,14 @@ img {
 }
 
 .hero h1 span {
+    display: block;
+
+}
+
+.hero h1 span:first-child {
     color: transparent;
     -webkit-text-stroke: 1px #00cfff;
     font-size: 38px;
-    display: block;
 }
 
 .h1-percent {
@@ -344,6 +350,20 @@ img {
     transform: rotate(330deg);
 }
 
+.disc-span {
+    padding: 17px 17px;
+
+}
+
+.discount span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-bottom: -6px;
+
+}
+
 .offer-div div {
     margin-right: -20px;
 
@@ -434,7 +454,7 @@ img {
 .blue-back {
 
     background: linear-gradient(180deg, rgba(87, 200, 242, 1) 50%, #2b72c5 100%);
-    padding: 80px 0;
+    padding: 40px 0;
     z-index: 2;
     margin-top: -40px;
 
@@ -493,7 +513,7 @@ img {
     position: absolute;
     top: -10px;
     left: -15px;
-    font-size: 16px;
+    font-size: 22px;
 
 }
 
@@ -572,31 +592,33 @@ img {
     width: 100%;
     margin: 15px auto;
     margin-top: 40px;
+    margin-bottom: 0;
     background: linear-gradient(262deg, rgba(255, 179, 0, 1) 20%, #ff4e00 100%);
     padding: 5px 0;
 }
 
-.limited p {
+.limited marquee {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    animation: text 4s infinite linear;
+    /* animation: text 20s infinite linear; */
     padding-left: 100%;
     white-space: nowrap;
     font-size: 22px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: max-content;
     column-gap: 5px;
 
 }
 
-.limited p img {
+.limited img {
     width: 20px;
+    margin: auto 5px;
+
 }
 
-@keyframes text {
+/* @keyframes text {
     0% {
         transform: translate(0, 0);
     }
@@ -604,15 +626,15 @@ img {
     100% {
         transform: translate(-140%, 0);
     }
-}
+} */
 
-.banner-bottles{
+.banner-bottles {
     position: relative;
     margin-bottom: 80px;
 }
 
-.bottles-div{
-     position: absolute;
+.bottles-div {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -624,7 +646,8 @@ img {
     justify-content: space-between;
 
 }
-.bottles-div p{
+
+.bottles-div p {
     text-transform: uppercase;
     font-size: 34px;
     color: white;
@@ -632,11 +655,12 @@ img {
     width: 70%;
     line-height: 1;
     text-shadow: 2px 0 #fb265f, -2px 0 #fb265f, 0 2px #fb265f, 0 -2px #fb265f,
-             1px 1px #fb265f, -1px -1px #fb265f, 1px -1px #fb265f, -1px 1px #fb265f;
+        1px 1px #fb265f, -1px -1px #fb265f, 1px -1px #fb265f, -1px 1px #fb265f;
     letter-spacing: 1px;
-    
+
 }
-.bottles-div a{
+
+.bottles-div a {
     margin: 0 auto;
 }
 
@@ -645,7 +669,7 @@ img {
     height: 50px;
     background-color: #2b72c5;
     clip-path: polygon(0 0, 100% 0, 100% 40%, 50% 100%, 0 40%);
-     margin-top: -3px;
+    margin-top: -3px;
     z-index: 3;
 }
 
@@ -789,7 +813,8 @@ video {
 .last-banner {
     position: relative;
 }
-.cta{
+
+.cta {
     text-transform: uppercase;
     font-size: 25px;
     color: white;
@@ -800,13 +825,935 @@ video {
     font-family: "Roboto", sans-serif;
     font-weight: 800;
 }
-.last-banner a {
 
+.last-banner a {
+    display: inline-block;
+}
+
+.last-div {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
     position: absolute;
-    top: 50%;
+    top: 34%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+
+
+
+
+
+
+}
+
+.last-div .cta {
+    border-radius: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.last-p {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transform: rotate(350deg);
+    margin: 0 auto;
+    margin-right: 0;
+}
+
+.last-p span {
+    display: block;
+    width: max-content;
+    border-radius: 25px;
+    padding: 3px 15px;
+
+}
+
+.last-p span:first-child {
+    background-color: #76d42a;
+    margin-left: -12px;
+    margin-bottom: 5px;
+}
+
+.last-p span:last-child {
+    background-color: white;
+    color: #76d42a;
+    border: 1px solid #76d42a;
+    margin-left: -10px;
 }
 
 
-@media only screen and (min-width: 500px) {}
+.last-div div p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+.last-img {
+    margin-top: -3px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 500px) {
+
+    .hero h1 span {
+        font-size: 50px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero h2 {
+        font-size: 90px;
+    }
+
+    .h1-percent p span {
+        width: 26px;
+        height: 10px;
+    }
+
+    .hero-rotate h4 {
+        font-size: 30px;
+    }
+
+    .hero-rotate h5 {
+        font-size: 24px;
+    }
+
+    .hero-blue p {
+        font-size: 26px;
+    }
+
+    .wow-badges img {
+        width: 100px;
+    }
+
+    .offers-div p {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 80px;
+    }
+
+    .offers-title img {
+        width: 70px;
+    }
+
+    .offers-div h4 img {
+        width: 40px;
+    }
+
+    .offers-div h4 {
+        font-size: 26px;
+    }
+
+    .mySwiper .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 50px);
+    }
+
+    .mySwiper .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 50px);
+    }
+
+    .name {
+        font-size: 22px;
+
+    }
+
+    .bestsellers-title img {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        left: 68%;
+    }
+
+    .bestsellers-title h4 {
+        font-size: 22px;
+    }
+
+    .bestseller .name {
+        margin: 5px auto;
+        font-size: 18px;
+    }
+
+    .bottles-div p {
+        font-size: 46px;
+    }
+
+    .limited p {
+        font-size: 32px;
+    }
+
+    .cta {
+        font-size: 34px;
+    }
+
+    .blue-v-shape p {
+        font-size: 36px;
+    }
+
+    .green-back .title {
+        font-size: 65px;
+    }
+
+
+    .last-div {
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+
+
+
+
+
+}
+
+
+@media only screen and (min-width: 786px) {
+
+    .on-mobile {
+        display: none;
+    }
+
+    .on-desktop {
+        display: block;
+    }
+
+    .last-div {
+        /* display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        width: 50%;
+        height: 100%;
+ */
+        width: 55%;
+        height: 100%;
+
+
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+    }
+
+    .last-p {
+        margin: auto;
+        margin-top: 0;
+        margin-left: 0;
+
+    }
+
+    .last-div div {
+        margin: auto;
+        margin-bottom: 0;
+    }
+
+    .last-div div p {
+        padding-top: 2px;
+    }
+
+
+    .last-div .cta {
+        text-transform: uppercase;
+        font-size: 25px;
+        color: white;
+        background-color: #ff4e00;
+        width: max-content;
+        padding: 5px 25px;
+        border-radius: 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 800;
+    }
+
+    .last-div div {
+        margin: auto;
+        margin-bottom: 0;
+    }
+
+    .hero-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h1 span {
+        color: white;
+        -webkit-text-stroke: unset;
+        font-size: 46px;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+    }
+
+
+    .hero h1 span:last-child {
+        display: none;
+
+    }
+
+    .hero h1 span:first-child {
+        color: white;
+        -webkit-text-stroke: unset;
+    }
+
+
+    .hero-p,
+    .hero-text h5 {
+        text-align: center;
+        color: white;
+        font-size: 16px;
+
+    }
+
+    .hero-text h5 {
+        font-weight: 400;
+    }
+
+    .hero-text h4 {
+        color: white;
+        background-color: #ff4e00;
+        width: max-content;
+        padding: 4px 14px;
+        border-radius: 15px;
+        text-transform: uppercase;
+        margin: 5px auto;
+        font-size: 20px;
+    }
+
+
+    .hero-div .cta {
+        text-transform: uppercase;
+        font-size: 18px;
+        color: white;
+        background-color: #fcc100;
+        border: white 1px solid;
+        width: max-content;
+        padding: 5px 25px;
+        border-radius: 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 800;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 70px;
+    }
+
+    .wow-badges {
+        width: 50%;
+        margin: 15px auto;
+    }
+
+    .wow-badges img {
+        width: 85px;
+    }
+
+
+    .mySwiper {
+        width: 90%;
+        margin: auto;
+    }
+
+    .swiper-button-next:after {
+        content: unset;
+
+    }
+
+    .swiper-button-prev:after {
+        content: unset;
+
+    }
+
+    .title span {
+        display: inline-block;
+    }
+
+    .bestsellers-title img {
+        left: 85%;
+    }
+
+    .offers-title img {
+        position: absolute;
+        top: 20%;
+        left: 90%;
+    }
+
+    .blue-back .bestsellers:first-child .bestsellers-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .blue-back .bestsellers:last-child .bestsellers-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+
+    .bottles-div a {
+        margin: auto;
+        width: max-content;
+    }
+
+    .bottles-div {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        text-align: center;
+        margin: auto;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+
+    .bottles-div p {
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        line-height: 1.1;
+    }
+
+    .limited marquee {
+        font-size: 26px;
+    }
+
+
+    .green-back {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        padding-top: 80px;
+    }
+
+    .swiper-button-next:after {
+        content: '\2B9C';
+        color: white;
+        transform: rotate(180deg);
+
+    }
+
+    .swiper-button-prev:after {
+        content: '\2B9C';
+        color: white;
+    }
+
+    .green-bullets {
+        display: block;
+    }
+
+    .green-bullets ul {
+        padding: 0;
+        border: unset;
+        padding-top: 15px;
+    }
+
+    .green-bullets p {
+        font-size: 20px;
+    }
+
+    .video-div {
+        position: relative;
+    }
+
+    video {
+        position: sticky;
+        top: 0;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .hero h1 span:first-child {
+        font-size: 45px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .wow-badges img {
+        width: 100px;
+    }
+
+    .offers-div p {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 95px;
+    }
+
+    .offer {
+        min-height: 440px;
+    }
+
+    .bestsellers-title h4 {
+        font-size: 26px;
+    }
+
+    .bottles-div p {
+        font-size: 45px;
+    }
+
+    .green-bullets p {
+        font-size: 24px;
+    }
+
+    .green-bullets ul li {
+        font-size: 18px;
+    }
+
+    .green-back {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+    }
+
+    .green-back .title {
+        font-size: 80px;
+    }
+
+    .last-div .cta {
+        font-size: 30px;
+    }
+
+    .hero-div .cta {
+        font-size: 24px;
+    }
+
+
+
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .hero h1 span:first-child {
+        font-size: 50px;
+    }
+
+    .hero h2 {
+        font-size: 120px;
+    }
+
+    .h1-percent p span {
+        width: 45px;
+    }
+
+    .h1-percent p {
+        font-size: 18px;
+    }
+
+    .hero-flex {
+        column-gap: 15px;
+    }
+
+    .hero-p,
+    .hero-text h5 {
+        text-align: center;
+        color: white;
+        font-size: 22px;
+    }
+
+    .hero-text h4 {
+        font-size: 26px;
+    }
+
+    .hero-div .cta {
+        font-size: 36px;
+    }
+
+    .mySwiper {
+        width: 75%;
+        margin: auto;
+        padding: 0 40px;
+    }
+
+    .offer .thumb {
+        width: 80%;
+    }
+
+    .offer a {
+        margin-top: 15px;
+    }
+
+    .mySwiper .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 0px);
+    }
+
+    .mySwiper .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 0px);
+    }
+
+    .mySwiper .swiper-button-prev:after,
+    .mySwiper .swiper-button-next:after {
+        font-size: 40px;
+    }
+
+    .offer {
+        min-height: 520px;
+    }
+
+    .discount span {
+        font-size: 20px;
+    }
+
+
+    .bestseller .discount {
+        font-size: 26px;
+    }
+
+    .bestseller .name {
+        font-size: 24px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .bestseller .free-delivery,
+    .bestseller .free-plans {
+        font-size: 16px;
+    }
+
+    .bestseller a {
+        font-size: 30px;
+    }
+
+    .limited marquee {
+        font-size: 40px;
+    }
+
+    .limited img {
+        width: 30px;
+    }
+
+    .bottles-div p {
+        font-size: 50px;
+    }
+
+    .cta {
+        font-size: 46px;
+    }
+
+    .blue-v-shape {
+        height: 68px;
+    }
+
+    .blue-v-shape p {
+        font-size: 45px;
+    }
+
+    .green-back {
+        display: grid;
+        grid-template-columns: 650px 1fr;
+    }
+
+    .green-bullets p {
+        font-size: 28px;
+    }
+
+    .green-bullets ul li {
+        font-size: 22px;
+    }
+
+    .green-bullets ul li img {
+        width: 45px;
+    }
+
+    .offer-div div p,
+    .free-delivery {
+        font-size: 24px;
+    }
+
+    .discount {
+        font-size: 30px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .bundle-content {
+        font-size: 20px;
+    }
+
+    .last-p {
+        font-size: 36px;
+    }
+
+    .last-div .cta {
+        font-size: 46px;
+    }
+
+    .last-div div p {
+        font-size: 30px;
+    }
+
+    .bestsellers-div .thumb {
+        width: 80%;
+    }
+
+    .bestsellers-div {
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    .bestseller a {
+        font-size: 24px;
+    }
+
+    .bestseller .name {
+        font-size: 22px;
+    }
+
+    .bestseller .free-delivery,
+    .bestseller .free-plans {
+        font-size: 14px;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .offers-title img {
+        position: absolute;
+        top: 20%;
+        left: 80%;
+    }
+
+    .wow-badges {
+        width: 35%;
+    }
+
+    .discount span {
+        font-size: 24px;
+    }
+
+    .bestseller .discount {
+        font-size: 22px;
+    }
+
+    .bestsellers-div {
+        column-gap: 30px;
+    }
+
+    .green-back {
+        display: grid;
+        grid-template-columns: 700px 1fr;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .green-back {
+        display: grid;
+        grid-template-columns: 900px 1fr;
+    }
+
+    .bottles-div p {
+        font-size: 66px;
+    }
+
+
+    .cta {
+        font-size: 60px;
+    }
+
+
+    .container {
+        width: 80%;
+    }
+
+    .wow-badges {
+        width: 35%;
+    }
+
+    .hero-p,
+    .hero-text h5 {
+        font-size: 32px;
+    }
+
+    .hero-flex {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 100px;
+    }
+
+    .hero h1 span:first-child {
+        font-size: 70px;
+    }
+
+    .hero h2 {
+        font-size: 160px;
+    }
+
+    .h1-percent p {
+        font-size: 30px;
+    }
+
+    .hero-text h4 {
+        font-size: 34px;
+    }
+
+    .hero-div .cta {
+        font-size: 46px;
+    }
+
+    .offers-div h4 {
+        font-size: 36px;
+    }
+
+
+
+    .offer {
+        min-height: 570px;
+    }
+
+    .orange-v-shape {
+        height: 100px;
+    }
+
+    .blue-back {
+        padding: 85px 0;
+        margin-top: -75px;
+    }
+
+    .bestsellers-title img {
+        left: 80%;
+    }
+
+    .bestsellers-title img {
+        width: 125px;
+    }
+
+    .last-p {
+        font-size: 50px;
+    }
+
+    .last-div div p {
+        font-size: 38px;
+    }
+
+    .last-div .cta {
+        font-size: 56px;
+    }
+
+    .last-div {
+        width: 50%;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1800px) {
+    .green-back {
+        display: grid;
+        grid-template-columns: 700px 1fr;
+          padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 60px;
+    }
+
+    .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 70px);
+    }
+
+    .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 70px);
+
+    }
+    .green-back { 
+      
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+
+    .container {
+        width: 70%;
+    }
+
+    .wow-badges {
+        width: 35%;
+    }
+
+    .hero-text h4 {
+        margin: 15px auto;
+    }
+
+    .hero-div .cta {
+        margin-top: 20px;
+    }
+
+    .green-back {
+        display: grid;
+        grid-template-columns: 1200px 1fr;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+
+    .mySwiper1 .offer {
+        width: 50%;
+    }
+
+    .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 185px);
+    }
+
+    .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 185px);
+    }
+}
